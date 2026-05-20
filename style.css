@@ -1,0 +1,178 @@
+:root {
+  --text: #222;
+  --muted: #666;
+  --link: #1772d0;
+  --border: #e6e6e6;
+  --background: #fff;
+  --surface: #f7f8fa;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  color: var(--text);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.55;
+}
+
+a {
+  color: var(--link);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.page {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 48px 24px 32px;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 32px;
+  align-items: center;
+  padding-bottom: 32px;
+  border-bottom: 1px solid var(--border);
+}
+
+.profile-image {
+  width: 180px;
+  height: 180px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #e9eef8, #f9f0e8);
+  color: #666;
+  font-size: 44px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  margin-bottom: 16px;
+  font-size: 34px;
+  font-weight: 400;
+  text-align: center;
+}
+
+h2 {
+  margin: 36px 0 16px;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+h3 {
+  margin-bottom: 4px;
+  font-size: 17px;
+}
+
+.lead {
+  margin-bottom: 14px;
+}
+
+.contact {
+  margin-bottom: 0;
+}
+
+.timeline,
+.paper-list {
+  display: grid;
+  gap: 18px;
+}
+
+.item {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 20px;
+}
+
+.item-date {
+  color: var(--muted);
+  font-size: 15px;
+}
+
+.item-content p,
+.paper p {
+  margin-bottom: 4px;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.paper {
+  padding: 16px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--surface);
+}
+
+.compact-list {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.compact-list li + li {
+  margin-top: 8px;
+}
+
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.tag-list li {
+  padding: 6px 12px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--surface);
+}
+
+footer {
+  margin-top: 44px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 14px;
+}
+
+@media (max-width: 680px) {
+  .page {
+    padding: 32px 18px 24px;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: left;
+  }
+
+  .intro {
+    width: 100%;
+  }
+
+  .item {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+}
